@@ -12,7 +12,7 @@ Featured: No
 Featured Image Description: A modern healthcare technology interface showing insurance eligibility verification workflow, with visual representations of patient data flowing through connected systems, coverage status indicators, and benefit information displays. Clean, professional aesthetic in healthcare-appropriate colors without showing identifiable patient information.
 
 ------ SUBTITLE MAIN ------
-How Eligibility Verification Actually Works
+The Cost of Manual Verification
 
 ------ CONTENT 1 ------
 The average healthcare practice spends 12.64 minutes on each manual eligibility check. That's according to the 2024 CAQH Index Report—and when you multiply it across the millions of verifications happening daily, you start to understand why CAQH estimates full automation could save $13.9 billion annually. That's roughly 16% of all administrative transaction costs in U.S. healthcare.
@@ -48,11 +48,9 @@ For specialty medications and complex services, basic eligibility isn't enough. 
 Some platforms address this through portal automation—logging into payer websites to grab detailed benefit information. Others use AI to interpret unstructured benefit documents or even call payer phone lines directly.
 
 ------ SUBTITLE 3 ------
-The Platforms
+Clearinghouse and RCM Platforms
 
 ------ CONTENT 3 ------
-**Clearinghouse and RCM Platforms**
-
 These vendors offer eligibility as part of broader revenue cycle management. The trade-off: more capability, but also more complexity and cost.
 
 **Waystar** is a comprehensive RCM platform with eligibility verification alongside claims, denial management, and patient payments. They connect to 900+ payers and process eligibility for over 1 million providers. Real-time and batch processing, patient cost estimation, coverage discovery for uninsured patients. Integrates with Epic, Cerner, MEDITECH, athenahealth. Enterprise pricing—you'll need to call for quotes. The downside: it's built for mid-size to large organizations. If you just need basic eligibility, you're buying more platform than necessary.
@@ -96,7 +94,7 @@ These apply AI to automate verification workflows beyond standard EDI transactio
 **Thoughtful AI** provides revenue cycle automation with AI agents handling eligibility, claims, denials, payment posting, and patient follow-up. They position their agents as handling complete workflows rather than just surfacing information. Newer entrant to the market, so may have less payer coverage than established platforms. Volume-based pricing.
 
 ------ SUBTITLE 6 ------
-How the Features Stack Up
+Feature Comparison and Selection Guide
 
 ------ CONTENT 6 ------
 [TABLE - Copy from source markdown]
@@ -118,10 +116,8 @@ How the Features Stack Up
 | Infinx | Yes | Yes | Yes | Yes | Yes | Contact |
 | Thoughtful AI | Yes | Yes | Limited | Yes | Yes | Contact |
 
------- SUBTITLE 7 ------
-How to Actually Choose
+**How to Actually Choose**
 
------- CONTENT 7 ------
 Your selection depends on organization type, verification volume, and workflow requirements. A few things worth thinking through:
 
 **Real-time vs. batch:** Do you need results at point of service, or can you process overnight for scheduled patients? Most practices need real-time, but high-volume operations benefit from batch.
@@ -142,10 +138,10 @@ Your selection depends on organization type, verification volume, and workflow r
 
 **Specialty pharmacy:** Standard eligibility platforms won't meet your needs. Consider Neon Health, Infinx, or Inovalon—platforms built for specialty complexity.
 
------- SUBTITLE 8 ------
+------ SUBTITLE 7 ------
 Where the Market Is Heading
 
------- CONTENT 8 ------
+------ CONTENT 7 ------
 The eligibility verification market is splitting into two tiers.
 
 **Commodity verification:** Basic real-time eligibility will remain widely available at low or no cost through clearinghouses and free platforms. For standard office visits and procedures, this is often sufficient.

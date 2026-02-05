@@ -24,7 +24,7 @@ These aren't abstract statistics. They're patients waiting days or weeks to star
 What follows is a breakdown of where PA delays actually happen, what they cost, and seven concrete strategies to reduce turnaround time—from operational fixes you can implement this week to technology investments that compress days into minutes.
 
 ------ SUBTITLE 2 ------
-Where Delays Actually Happen
+Where Delays Happen and What They Cost
 
 ------ CONTENT 2 ------
 Here's where time gets lost in the PA lifecycle:
@@ -46,10 +46,8 @@ The AMA survey found that 31% of physicians report their requests are "often" or
 
 *Note: Step-level estimates are editorial, informed by AMA data, Surescripts benchmarks, and vendor case studies. Your mileage will vary.*
 
------- SUBTITLE 3 ------
-The Cost of PA Delays
+**The Cost of PA Delays**
 
------- CONTENT 3 ------
 The impact touches clinical outcomes, workforce wellbeing, patient experience, and the bottom line.
 
 **Clinical Impact**
@@ -76,10 +74,10 @@ The impact touches clinical outcomes, workforce wellbeing, patient experience, a
 
 The business case is clear: every day shaved from turnaround time reduces staff costs, improves outcomes, and increases the likelihood that patients actually start therapy.
 
------- SUBTITLE 4 ------
-7 Strategies to Cut PA Turnaround Time
+------ SUBTITLE 3 ------
+Strategies 1-3: Discovery, Documentation, and Electronic PA
 
------- CONTENT 4 ------
+------ CONTENT 3 ------
 These range from operational improvements requiring no technology investment to automation that requires vendor partnerships. Most organizations implement several simultaneously.
 
 **1. Automate PA Requirement Discovery**
@@ -102,10 +100,6 @@ The fix: standardize the clinical data each payer needs for common therapies. Cr
 
 For biologics, for example, your template might include: diagnosis with ICD-10 code, prior treatment history (which conventional therapies were tried and failed), relevant lab results, prescriber attestation of medical necessity. Having this structure pre-defined can reduce documentation gathering from days to hours.
 
------- SUBTITLE 5 ------
-More Strategies: Electronic PA and AI
-
------- CONTENT 5 ------
 **3. Switch from Fax/Phone to Electronic PA**
 
 Fax-based PA involves sending paper documents, waiting for payer receipt confirmation, and following up by phone. Phone submission means hold times averaging 30+ minutes and manual data entry on both ends.
@@ -121,6 +115,10 @@ Electronic PA routes requests digitally and returns decisions through the same c
 
 One caveat: "electronic" doesn't mean instant. Many electronic submissions still route through payer review queues. But eliminating transmission delays and enabling status tracking makes a real difference.
 
+------ SUBTITLE 4 ------
+Strategies 4-5: AI Automation and Metrics
+
+------ CONTENT 4 ------
 **4. Implement AI-Powered PA Automation**
 
 Even with electronic submission, staff still compile documentation, complete forms, submit requests, track status, and handle follow-up. This is where that 13 hours per physician per week goes.
@@ -133,12 +131,8 @@ House Rx reports PA generated in **15 seconds**, submitted in **under 60 seconds
 
 **To implement:** Evaluate AI PA platforms based on your therapy mix and payer coverage. Start with high-volume, high-delay medications where ROI is clearest. Measure baseline metrics before implementation. Plan for staff redeployment as automation handles routine work.
 
-For platform comparisons, see our guide: How to Reduce Prior Authorization Delays.
+For platform comparisons, see our guide: Electronic Prior Authorization Platforms Compared.
 
------- SUBTITLE 6 ------
-Metrics, Gold Carding, and Regulatory Changes
-
------- CONTENT 6 ------
 **5. Track and Benchmark Your Metrics**
 
 Many organizations don't actually know their PA performance. Without data, you can't identify which payers, therapies, or workflow steps create the most delay.
@@ -156,6 +150,10 @@ Many organizations don't actually know their PA performance. Without data, you c
 
 **To implement:** Configure PA tracking in your practice management or EHR system. Generate weekly/monthly reports. Identify outliers—which payers or therapies have the worst performance? Set targets and track progress.
 
+------ SUBTITLE 5 ------
+Strategies 6-7: Gold Carding and Regulatory Leverage
+
+------ CONTENT 5 ------
 **6. Leverage Gold Carding Where Available**
 
 PA requirements apply uniformly regardless of provider approval history. A provider with 99% approval faces the same process as one with 60%. That seems... wrong.
@@ -181,10 +179,10 @@ What this means: payers will be forced to make faster decisions. FHIR APIs will 
 
 **How to use this strategically:** Reference compliance requirements in payer negotiations. Evaluate vendors on FHIR readiness. Plan for reduced PA burden as regulations take effect. Monitor payer compliance and report violations.
 
------- SUBTITLE 7 ------
+------ SUBTITLE 6 ------
 What's Changing
 
------- CONTENT 7 ------
+------ CONTENT 6 ------
 The PA landscape is transforming through both regulatory pressure and technology.
 
 **CMS-0057-F** mandates faster decisions and standardized APIs. By 2027, the payer side of PA will look fundamentally different for regulated plans. Commercial plans not subject to the rule may lag, creating a bifurcated landscape.
@@ -195,10 +193,10 @@ The PA landscape is transforming through both regulatory pressure and technology
 
 **The trajectory:** PA turnaround will compress from days to hours over the next 2-3 years. Organizations investing now will see competitive advantage in staff efficiency and patient experience.
 
------- SUBTITLE 8 ------
+------ SUBTITLE 7 ------
 The Bottom Line
 
------- CONTENT 8 ------
+------ CONTENT 7 ------
 PA delays are solvable. The solutions exist—operational improvements you can implement today, technology investments that deliver dramatic reductions.
 
 **Start with operational fixes:**

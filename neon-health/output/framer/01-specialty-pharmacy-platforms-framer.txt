@@ -24,7 +24,7 @@ So the question facing specialty pharmacy leaders isn't whether to invest in tec
 We looked at 14 platforms across three categories: the established clinical management systems that have been around for years, the digital-first solutions built by startups, and the newer AI-powered platforms focused on automation. What follows is what we found.
 
 ------ SUBTITLE 2 ------
-What These Platforms Actually Do
+What These Platforms Do and Market Trends
 
 ------ CONTENT 2 ------
 Before diving into specific vendors, it helps to understand the five functional areas where these platforms compete.
@@ -39,10 +39,8 @@ Before diving into specific vendors, it helps to understand the five functional 
 
 **Payer management** covers contracting, outcomes reporting, accreditation compliance. As payers demand more granular data for value-based arrangements, this increasingly drives platform selection.
 
------- SUBTITLE 3 ------
-Market Trends Worth Knowing
+**Market Trends Worth Knowing**
 
------- CONTENT 3 ------
 Four dynamics are reshaping this market in 2026.
 
 Health systems keep launching their own specialty pharmacies to capture margin on drugs dispensed to their patients. These pharmacies need tight EHR integration and outcomes reporting that feeds quality programs—requirements that favor certain platforms.
@@ -53,10 +51,10 @@ AI is entering from two directions: established platforms bolting on AI features
 
 And regulatory complexity keeps growing. USP 800, expanding REMS programs, 340B compliance—platforms need to track requirements at the medication level and document everything for audits.
 
------- SUBTITLE 4 ------
+------ SUBTITLE 3 ------
 Established Clinical Management Systems
 
------- CONTENT 4 ------
+------ CONTENT 3 ------
 These evolved from pharmacy management systems and offer mature clinical workflows. They're the safe choice if you prioritize stability and comprehensive clinical features.
 
 **WellSky CareTend** has the largest installed base in specialty pharmacy. It came from CareTend (before WellSky acquired it) and has deep roots in home infusion. The clinical depth is real—especially for infusion therapies requiring extensive monitoring. It runs on-premise or hosted. The trade-off: it's not cloud-native, so you're dealing with older architecture even as WellSky modernizes it. If you're a health system pharmacy or independent with high clinical complexity, particularly infusion, CareTend is probably on your shortlist.
@@ -75,20 +73,20 @@ These evolved from pharmacy management systems and offer mature clinical workflo
 
 **PioneerRx** serves independents wanting modern technology without enterprise complexity. It covers both traditional and specialty operations on one platform, with an interface that's notably more usable than legacy systems. Regular updates based on customer input. Good choice for independents expanding into specialty who don't want to run separate platforms.
 
------- SUBTITLE 5 ------
-Digital-First Solutions
+------ SUBTITLE 4 ------
+Digital-First and AI-Powered Platforms
 
------- CONTENT 5 ------
+------ CONTENT 4 ------
+**Digital-First Solutions**
+
 Built specifically for specialty pharmacy challenges, often with startup funding and modern architectures.
 
 **House Rx** is focused specifically on medically integrated pharmacy—where specialty pharmacies operate within physician practices. Founded in 2020, they've built AI-powered PA automation into the core platform. Their reported numbers are impressive: 92% first-pass PA approval rate, 3.5-day average fill time versus a 15.5-day industry average, PA documentation generated in 15 seconds. They've processed over $1.2 billion in specialty prescriptions across 80+ clinic sites. (These are self-reported figures—we couldn't independently verify them, but they're directionally interesting.) If you're a provider-owned specialty pharmacy or building a medically integrated model, House Rx is purpose-built for that.
 
 **Bayvrio** does something different: it's a marketplace connecting specialty pharmacies to pharmaceutical manufacturers and hub programs. Rather than traditional pharmacy management, Bayvrio helps you access limited distribution networks and manufacturer programs without building those relationships yourself. Useful if you're trying to expand into new therapies and don't have the relationships yet.
 
------- SUBTITLE 6 ------
-AI-Powered Platforms
+**AI-Powered Platforms**
 
------- CONTENT 6 ------
 These apply AI as a core capability rather than an add-on. They're focused on automating the administrative work that consumes staff time.
 
 **Neon Health** provides what they call an "AI workforce"—agents that handle benefit verification, prior auth, financial assistance enrollment, and adherence support. Unlike traditional RPA (which breaks when portals change), Neon's AI adapts to changes and handles exceptions. They report 2x faster time-to-therapy and 80% cost reduction versus manual processes. Raised $6M in September 2025 to expand specialty drug access. HIPAA compliant with HITRUST and SOC 2 certifications. The approach is modular—they integrate with your existing pharmacy systems rather than replacing them. Good fit for specialty pharmacies, pharma hub programs, and health systems where patient access is the bottleneck.
@@ -99,10 +97,10 @@ These apply AI as a core capability rather than an add-on. They're focused on au
 
 **Latent Health** takes a clinical AI angle rather than administrative. They focus on clinical decision support and patient monitoring—helping pharmacists with complex therapy management rather than automating paperwork. If your challenge is clinical complexity rather than administrative volume, Latent is built for that.
 
------- SUBTITLE 7 ------
-How the Features Stack Up
+------ SUBTITLE 5 ------
+Feature Comparison and Performance Data
 
------- CONTENT 7 ------
+------ CONTENT 5 ------
 [TABLE - Copy from source markdown]
 
 | Platform | Clinical | Dispensing | PA Auto | BV Auto | Financial Assist | Adherence | REMS | 340B | Deploy | AI |
@@ -124,10 +122,8 @@ How the Features Stack Up
 
 Full = comprehensive native capability. Partial = basic or through integration. None = not available.
 
------- SUBTITLE 8 ------
-Performance Numbers (With Caveats)
+**Performance Numbers (With Caveats)**
 
------- CONTENT 8 ------
 Comparing performance across platforms is genuinely difficult. Patient populations differ, therapy mixes differ, and most data is self-reported by vendors.
 
 **Time-to-fill:** Industry average is roughly 15.5 days from prescription to patient delivery (House Rx cites this figure). House Rx reports 3.5 days. AI platforms generally claim 50-70% reductions through automation. These claims are plausible but hard to verify independently.
@@ -138,10 +134,10 @@ Comparing performance across platforms is genuinely difficult. Patient populatio
 
 **A note on this data:** Most of it comes from vendor press releases and marketing materials. Independent verification through peer-reviewed studies or organizations like NCPDP or NASP is thin on the ground. When evaluating platforms, ask for customer references with similar patient populations and therapy mixes.
 
------- SUBTITLE 9 ------
+------ SUBTITLE 6 ------
 Matching Platforms to Pharmacy Types
 
------- CONTENT 9 ------
+------ CONTENT 6 ------
 **Health system specialty pharmacy:** You need EHR integration (Epic, Cerner, MEDITECH), clinical documentation that feeds quality measures, outcomes reporting for contracts, and 340B/REMS compliance. Look at WellSky CareTend, Omnicell/EnlivenHealth, Inovalon ScriptMed, or CPS therigyst. Layer in Neon Health or Tandem if patient access automation is a priority.
 
 **Independent specialty pharmacy:** You need reasonable TCO, multi-payer support, efficient operations, and accreditation compliance without dedicated IT staff. PrimeRx Specialty and PioneerRx fit here. Add Mandolin or Neon Health for PA/patient access automation.
@@ -152,10 +148,12 @@ Matching Platforms to Pharmacy Types
 
 **Provider-owned medically integrated pharmacy:** Tight provider workflow integration, clinical documentation from EHR, rapid PA turnaround. House Rx is purpose-built for this model.
 
------- SUBTITLE 10 ------
-Where AI Actually Helps (and Where It Doesn't)
+------ SUBTITLE 7 ------
+Where AI Helps and The Bottom Line
 
------- CONTENT 10 ------
+------ CONTENT 7 ------
+**Where AI Actually Helps (and Where It Doesn't)**
+
 AI in specialty pharmacy is real, but the impact varies.
 
 **Where AI delivers clear value:** Prior authorization works well because it's high-volume, rules-based, and document-intensive. AI can read clinical records, match payer requirements, and submit requests faster than humans doing it manually. Benefit verification similarly involves navigating portals, interpreting coverage, and extracting data—tasks that scale poorly with human labor. Patient outreach for refills, adherence, and scheduling frees clinical staff for complex work. Financial assistance involves matching patients to programs and completing enrollment—repetitive data work.
@@ -173,10 +171,8 @@ Pharmacies that view AI as replacing staff are missing the point. The ones getti
 • Does it layer into existing systems or require platform replacement?
 • What certifications does the vendor have for handling PHI?
 
------- SUBTITLE 11 ------
-The Bottom Line
+**The Bottom Line**
 
------- CONTENT 11 ------
 The market is bifurcating. Established vendors are adding AI. AI-native vendors are expanding clinical features. Both paths can work—your choice depends on where you're starting.
 
 If patient access delays, PA backlogs, or administrative costs are your constraint, AI-powered automation is the clearest path forward. If clinical complexity and therapy management drive your value, you need platforms with deep clinical functionality.

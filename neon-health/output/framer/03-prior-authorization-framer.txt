@@ -116,11 +116,7 @@ For context: standard (non-touchless) ePA via CVS Caremark averages 5.9 minutes 
 
 **Availity** operates a multi-payer portal connecting providers directly to 2,600+ payers for PA submission and tracking. Real-time status, payer-specific forms, claim integration. The limitation: Availity provides the connection, but payer systems determine decision time. Good for organizations wanting a single portal across multiple payers without deep automation.
 
------- SUBTITLE 5 ------
-AI-Powered Platforms
-
------- CONTENT 5 ------
-This is where the market is moving—platforms that apply AI to automate PA beyond just routing transactions.
+**AI-Powered Platforms**
 
 **Cohere Health** works primarily on the payer side, using AI to help payers make faster, more clinically appropriate authorization decisions. AI-powered clinical review, guideline-based approval automation, real-time decisions for routine cases while flagging complex ones for human review. If you're a provider, you benefit when your payers use Cohere. If you're a payer, this is worth evaluating.
 
@@ -134,10 +130,10 @@ This is where the market is moving—platforms that apply AI to automate PA beyo
 
 **Tandem** provides AI-powered medication access automation—PA as part of a broader workflow including benefit verification, financial assistance, and patient onboarding. Connects with pharmacy systems, EHRs, and payer platforms. Good for organizations wanting integrated medication access rather than PA-only solutions.
 
------- SUBTITLE 6 ------
-How the Features Stack Up
+------ SUBTITLE 5 ------
+Feature Comparison and Stakeholder Guide
 
------- CONTENT 6 ------
+------ CONTENT 5 ------
 [TABLE - Copy from source markdown]
 
 | Platform | Type | Specialty Rx | Appeals | FHIR | Speed | Integrations |
@@ -153,30 +149,22 @@ How the Features Stack Up
 | Infinitus | Voice AI | Moderate | Via voice | N/A | Call completion | Workflow APIs |
 | Tandem | AI Platform | Strong | Yes | Roadmap | Improved vs manual | Pharmacy, EHR |
 
------- SUBTITLE 7 ------
-Different Stakeholders, Different Priorities
+**Different Stakeholders, Different Priorities**
 
------- CONTENT 7 ------
-**If You're a Provider or Clinician**
+**If You're a Provider or Clinician:** You care about speed, EHR integration, and reducing staff hours. Touchless PA (Surescripts) offers speed for qualifying medications. AI platforms (Myndshft, Neon Health) reduce staff workload. CoverMyMeds provides broad connectivity.
 
-You care about speed, EHR integration, and reducing staff hours. Touchless PA (Surescripts) offers speed for qualifying medications. AI platforms (Myndshft, Neon Health) reduce staff workload. CoverMyMeds provides broad connectivity.
+**If You're a Specialty Pharmacy:** Standard ePA won't cut it for complex, high-cost drugs. You need deep PA capability, appeal automation (many specialty PAs require appeals), and financial assistance integration. Look at Neon Health, Tandem, and dedicated specialty platforms. CoverMyMeds has strong pharmacy connectivity but less depth for specialty complexity.
 
-**If You're a Specialty Pharmacy**
+**If You're a Payer:** Compliance (CMS-0057-F and state requirements), clinical appropriateness, and provider satisfaction matter. Cohere Health offers AI-powered authorization processing. Make sure any vendor supports FHIR compliance timelines.
 
-Standard ePA won't cut it for complex, high-cost drugs. You need deep PA capability, appeal automation (many specialty PAs require appeals), and financial assistance integration. Look at Neon Health, Tandem, and dedicated specialty platforms. CoverMyMeds has strong pharmacy connectivity but less depth for specialty complexity.
+**If You're in Pharma Patient Access:** Time-to-therapy, patient access metrics, and hub integration are priorities. Consider platforms like Neon Health and CoverMyMeds that support hub program integration and provide visibility into authorization outcomes.
 
-**If You're a Payer**
+------ SUBTITLE 6 ------
+Performance Data and Future Trends
 
-Compliance (CMS-0057-F and state requirements), clinical appropriateness, and provider satisfaction matter. Cohere Health offers AI-powered authorization processing. Make sure any vendor supports FHIR compliance timelines.
+------ CONTENT 6 ------
+**Real-World Performance Data**
 
-**If You're in Pharma Patient Access**
-
-Time-to-therapy, patient access metrics, and hub integration are priorities. Consider platforms like Neon Health and CoverMyMeds that support hub program integration and provide visibility into authorization outcomes.
-
------- SUBTITLE 8 ------
-Real-World Performance Data
-
------- CONTENT 8 ------
 A few concrete benchmarks worth knowing—though remember that most vendor data is self-reported.
 
 **Surescripts:** Standard ePA median decision time improved from 18.7 hours to 5.7 hours over recent years. Touchless PA achieves 22-27 seconds. The gap between "electronic" and "touchless" is enormous.
@@ -196,30 +184,20 @@ A few concrete benchmarks worth knowing—though remember that most vendor data 
 
 When evaluating platforms, ask for reference customers with similar patient populations and therapy mixes.
 
------- SUBTITLE 9 ------
-Where This Is Heading
+**Where This Is Heading**
 
------- CONTENT 9 ------
-**AI Replacing Phone and Fax**
+**AI Replacing Phone and Fax:** The most labor-intensive PA tasks—phone calls, fax monitoring, portal navigation—are being automated by AI. This is changing the staffing model. Rather than teams dedicated to PA, organizations can deploy AI and redeploy staff to exceptions and complex cases.
 
-The most labor-intensive PA tasks—phone calls, fax monitoring, portal navigation—are being automated by AI. This is changing the staffing model. Rather than teams dedicated to PA, organizations can deploy AI and redeploy staff to exceptions and complex cases.
+**FHIR Acceleration:** The CMS-0057-F deadline (January 2027) is forcing payer investment in FHIR APIs. Once the infrastructure exists, providers will have standardized, real-time access to authorization requirements and decisions. The Da Vinci implementation guides (CRD, DTR, PAS) provide the roadmap.
 
-**FHIR Acceleration**
+**Predictive PA:** The next frontier: predicting whether a PA will be approved before submission. AI platforms are beginning to alert prescribers when PA is likely to be denied, identify missing documentation before submission, and prioritize cases where AI predicts difficulty.
 
-The CMS-0057-F deadline (January 2027) is forcing payer investment in FHIR APIs. Once the infrastructure exists, providers will have standardized, real-time access to authorization requirements and decisions. The Da Vinci implementation guides (CRD, DTR, PAS) provide the roadmap.
+**Gold Carding Expansion:** As states implement gold carding laws, platforms will need to track provider-level approval rates. Providers with strong first-pass rates may see their PA burden dramatically reduced.
 
-**Predictive PA**
-
-The next frontier: predicting whether a PA will be approved before submission. AI platforms are beginning to alert prescribers when PA is likely to be denied, identify missing documentation before submission, and prioritize cases where AI predicts difficulty.
-
-**Gold Carding Expansion**
-
-As states implement gold carding laws, platforms will need to track provider-level approval rates. Providers with strong first-pass rates may see their PA burden dramatically reduced.
-
------- SUBTITLE 10 ------
+------ SUBTITLE 7 ------
 The Bottom Line
 
------- CONTENT 10 ------
+------ CONTENT 7 ------
 The PA burden is growing—39 authorizations per physician per week in 2024, up from 29 in 2022. The platforms that actually help fall into a few categories:
 
 **For broad connectivity:** CoverMyMeds and Availity give you extensive payer networks, but decision speed depends on payer processing.

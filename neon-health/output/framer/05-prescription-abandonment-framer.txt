@@ -64,10 +64,6 @@ Some therapeutic categories see dramatically higher abandonment:
 
 These rates reflect compounding factors: high costs, PA requirements, and patient-level barriers like fear of side effects and complex administration.
 
------- SUBTITLE 3 ------
-The Deductible Effect and Financial Assistance Gap
-
------- CONTENT 3 ------
 **The Deductible Effect**
 
 Specialty therapy abandonment spikes during the deductible period—Q1 of each plan year, when out-of-pocket costs are highest. According to CoverMyMeds, this creates a predictable window of high abandonment risk when patient cost share hasn't yet accumulated toward annual limits.
@@ -93,10 +89,10 @@ Copay accumulators and maximizers are increasingly common plan designs that prev
 
 These programs mean patients may face high costs mid-year when assistance exhausts but deductibles remain unmet—a second abandonment window beyond the deductible period.
 
------- SUBTITLE 4 ------
+------ SUBTITLE 3 ------
 Three Root Causes
 
------- CONTENT 4 ------
+------ CONTENT 3 ------
 Abandonment stems from three categories of barriers. Knowing which affects your patient population tells you where to focus.
 
 **1. Financial Barriers**
@@ -119,10 +115,6 @@ A patient gets a prescription for a specialty medication. At the pharmacy, they 
 - Foundation grant matching and application assistance
 - Alternative therapy identification when lower-cost equivalents exist
 
------- SUBTITLE 5 ------
-Administrative and Patient-Level Barriers
-
------- CONTENT 5 ------
 **2. Administrative Barriers (PA Delays, Coordination Failures)**
 
 Prior authorization delays are the second-largest driver. The 2024 AMA survey found 93% of physicians say PA delays care.
@@ -150,6 +142,10 @@ A patient receives a prescription. The specialty pharmacy calls to say PA is req
 
 For detailed PA strategies, see: How to Reduce Prior Authorization Delays.
 
+------ SUBTITLE 4 ------
+Patient-Level Barriers and Who Pays the Price
+
+------ CONTENT 4 ------
 **3. Patient-Level Barriers (Confusion, Fear, Logistics)**
 
 Even when cost is covered and PA is approved, patients may not fill due to confusion, fear, or logistics.
@@ -185,10 +181,8 @@ Or: the patient receives the medication but is terrified to self-inject. The tra
 - Simplified scheduling for infusion and site-of-care appointments
 - Transportation assistance
 
------- SUBTITLE 6 ------
-Who Pays the Price
+**Who Pays the Price**
 
------- CONTENT 6 ------
 Abandonment creates costs for everyone in healthcare. Understanding the distributed impact helps build alignment for improvement.
 
 **Patients:** Disease progression, hospitalization, worse long-term outcomes, continued symptoms when treatment could provide relief.
@@ -201,10 +195,10 @@ Abandonment creates costs for everyone in healthcare. Understanding the distribu
 
 **Health systems:** Readmissions, ED utilization, quality penalties, population health failure.
 
------- SUBTITLE 7 ------
+------ SUBTITLE 5 ------
 Solutions Mapped to Causes
 
------- CONTENT 7 ------
+------ CONTENT 5 ------
 [TABLE - Copy from source markdown]
 
 | Root Cause | Solution | Who Implements | Technology |
@@ -227,10 +221,10 @@ Solutions Mapped to Causes
 
 **If patient barriers are your primary driver (complex/injectable therapies):** Invest in onboarding and education. Multi-channel outreach. Consider nurse navigator or concierge models.
 
------- SUBTITLE 8 ------
+------ SUBTITLE 6 ------
 Measuring Abandonment
 
------- CONTENT 8 ------
+------ CONTENT 6 ------
 You can't improve what you don't measure.
 
 **Primary Metric: Paid Fill Rate**
@@ -261,10 +255,10 @@ To establish a baseline:
 
 Data sources won't align perfectly—prescriptions may be written but never sent, or filled at a different pharmacy. Reconciliation is imperfect but directionally valuable.
 
------- SUBTITLE 9 ------
+------ SUBTITLE 7 ------
 The Bottom Line
 
------- CONTENT 9 ------
+------ CONTENT 7 ------
 Prescription abandonment is the ultimate failure metric for patient access. Every abandoned prescription represents a patient who was prescribed treatment, went through the system, and never started therapy.
 
 The causes are well-understood:
