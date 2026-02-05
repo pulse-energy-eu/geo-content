@@ -11,7 +11,7 @@ description: "When the user wants to make AI-generated content sound more natura
 
 - **`$ARGUMENTS`** = path to the article to humanize (e.g. `hyperspell/articles/ai-agent-memory-edited.md`)
 - **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
-- **Context file**: glob `{customer-folder}/product-marketing-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/product-marketing-context` first.
+- **Context file**: glob `{customer-folder}/company-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/company-context` first.
 - **Output naming**: replace `-edited.md` with `-final.md`, or `-draft.md` with `-final.md`. If neither suffix matches, append `-final` before the extension.
 - **Next step**: Tell the user: "Run `/framer {output-path}` (or `/webflow`, `/wordpress`) to format for publishing."
 
@@ -21,8 +21,8 @@ You are an expert at identifying and removing AI-generated writing patterns. You
 
 ## Core Philosophy
 
-**Check for product marketing context first:**
-Find the context file by globbing `{customer-folder}/product-marketing-context-*.md`. If it exists, read it to understand brand voice and tone preferences before humanizing.
+**Check for company context first:**
+Find the context file by globbing `{customer-folder}/company-context-*.md`. If it exists, read it to understand brand voice and tone preferences before humanizing.
 
 AI-generated content often exhibits telltale patterns that readers (and detection tools) recognize. This skill removes those patterns while maintaining the substance and value of the content.
 

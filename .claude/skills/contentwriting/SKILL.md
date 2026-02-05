@@ -2,7 +2,7 @@
 name: contentwriting
 version: 3.0.0
 argument-hint: "<briefing-path> e.g. hyperspell/Hyperspell - 2.md"
-description: When the user wants to write a blog post from a content briefing. Use when the user says "write blog post," "create article," "blog from briefing," or provides a content briefing file. Works with product-marketing-context for company voice and tone.
+description: When the user wants to write a blog post from a content briefing. Use when the user says "write blog post," "create article," "blog from briefing," or provides a content briefing file. Works with company-context for company voice and tone.
 ---
 
 # Content Writing
@@ -11,7 +11,7 @@ description: When the user wants to write a blog post from a content briefing. U
 
 - **`$ARGUMENTS`** = path to the content briefing file (e.g. `hyperspell/Hyperspell - 2.md`)
 - **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
-- **Context file**: glob `{customer-folder}/product-marketing-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/product-marketing-context` first.
+- **Context file**: glob `{customer-folder}/company-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/company-context` first.
 - **Output**: `{customer-folder}/articles/{slug}-draft.md`
   - Slug is derived from the article's H1: lowercase, special chars removed, spaces → hyphens, max 60 chars
   - Create the `articles/` subdirectory if it does not exist
@@ -31,19 +31,18 @@ Before writing, load and verify these inputs:
 
 ### 1.1 Load Product Marketing Context
 
-Find the context file by globbing `{customer-folder}/product-marketing-context-*.md`. If it exists, read it. Extract and apply:
+Find the context file by globbing `{customer-folder}/company-context-*.md`. If it exists, read it. Extract and apply:
 
-| Element | How to Use It |
+| Context Section | How to Use It |
 |---------|---------------|
-| **Brand voice & tone** | Apply consistently throughout. Match formality level, personality, and style. |
-| **Customer language** | Use verbatim phrases from the context. These resonate because they're real. |
-| **Pain points** | Frame problems using the exact frustrations documented. |
-| **Differentiation** | Weave in naturally when relevant, not as a pitch. |
-| **Proof points** | Incorporate metrics, testimonials, and case data as supporting evidence. |
-| **Competitive landscape** | Use for positioning and comparison sections without direct attacks. |
-| **Words to use/avoid** | Follow the glossary strictly. |
+| **Voice & Tone** (Section 4) | Apply consistently throughout. Match formality level, personality, and style. |
+| **Industry Terminology & Language** (Section 3) | Use verbatim phrases and glossary terms. Follow words to use/avoid strictly. |
+| **Core Messaging & Positioning** (Section 5) | Frame problems using documented pain points. Weave in differentiation naturally, not as a pitch. Incorporate proof points as supporting evidence. Use competitive positioning for comparison sections without direct attacks. |
+| **Audience & Personas** (Section 2) | Write for the documented personas. Match their language and knowledge level. |
+| **Content Sensitivities** (Section 6) | Follow product mention guidelines. Respect regulatory constraints and taboos. |
+| **Content Language & Localization** (Section 7) | Match the primary language, formal/informal address, and spelling convention. |
 
-If no context file exists, ask the user to run `/product-marketing-context` first, or gather essential voice/positioning info before proceeding.
+If no context file exists, ask the user to run `/company-context` first, or gather essential voice/positioning info before proceeding.
 
 ### 1.2 Load Content Briefing
 
@@ -417,7 +416,7 @@ Before delivering the final post, verify against this checklist:
 - [ ] E-E-A-T signals present (expertise, sources, examples)
 
 ### Brand Voice Consistency
-- [ ] Tone matches product-marketing-context
+- [ ] Tone matches company-context
 - [ ] Customer language (verbatim phrases) used
 - [ ] Words to avoid are absent
 - [ ] Brand mentions are natural, not forced
@@ -461,7 +460,7 @@ When working from a content briefing:
 
 ## Voice and Tone
 
-**Primary source:** Pull from the context file discovered via `{customer-folder}/product-marketing-context-*.md` (Brand Voice section).
+**Primary source:** Pull from the context file discovered via `{customer-folder}/company-context-*.md` (Brand Voice section).
 
 If no context file exists, establish before writing:
 
@@ -540,6 +539,6 @@ Include when relevant:
 
 - **copy-editing**: For polishing the draft after writing
 - **copywriting**: For landing page and marketing page copy
-- **product-marketing-context**: For establishing brand voice and context
+- **company-context**: For establishing brand voice and context
 - **seo-audit**: For technical SEO review of published content
 - **programmatic-seo**: For creating blog content at scale

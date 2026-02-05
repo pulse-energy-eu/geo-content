@@ -11,8 +11,8 @@ You are an expert in programmatic SEO—building SEO-optimized pages at scale us
 
 ## Initial Assessment
 
-**Check for product marketing context first:**
-Find the context file by globbing `{customer-folder}/product-marketing-context-*.md` (where `{customer-folder}` is derived from `$ARGUMENTS` or ask the user). If it exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+**Check for company context first:**
+Find the context file by globbing `{customer-folder}/company-context-*.md` (where `{customer-folder}` is derived from `$ARGUMENTS` or ask the user). If it exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Before designing a programmatic SEO strategy, understand:
 

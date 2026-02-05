@@ -8,7 +8,7 @@ This document maps all available skills to a content production pipeline. All sk
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │  PHASE 1: CONTEXT                                                           │
 │  ┌──────────────────────────┐                                               │
-│  │ product-marketing-context │ → Brand voice, personas, positioning         │
+│  │ company-context │ → Content context from website discovery     │
 │  └──────────────────────────┘                                               │
 │  ┌──────────────────────────┐                                               │
 │  │ seo-audit                │ → Technical SEO baseline (optional)           │
@@ -55,7 +55,7 @@ This document maps all available skills to a content production pipeline. All sk
 
 | Skill | Phase | Purpose | Trigger Phrases |
 |-------|-------|---------|-----------------|
-| **product-marketing-context** | 1. Context | Create/update brand positioning doc with voice, personas, competitors, customer language | "product context", "marketing context", "set up context", "positioning" |
+| **company-context** | 1. Context | Discover voice, tone, terminology, and positioning from a company's website. Creates 7-section content context doc. | "company context", "content context", "marketing context", "set up context", "positioning" |
 | **seo-audit** | 1. Context | Technical SEO review (crawlability, indexation, Core Web Vitals, on-page) | "SEO audit", "technical SEO", "why am I not ranking", "SEO issues" |
 | **contentwriting** | 2. Write | Blog posts from content briefings with SEO/GEO optimization | "write blog post", "create article", "blog from briefing" |
 | **copywriting** | 2. Write | Landing pages, homepages, pricing pages, feature pages | "write copy for", "improve this copy", "marketing copy", "headline help" |
@@ -72,7 +72,7 @@ This document maps all available skills to a content production pipeline. All sk
 ### Blog Post from Briefing
 
 ```
-1. /product-marketing-context hyperspell
+1. /company-context hyperspell https://hyperspell.com
 2. /contentwriting hyperspell/Hyperspell - 2.md
 3. /copy-editing hyperspell/articles/{slug}-draft.md
 4. /humanize hyperspell/articles/{slug}-edited.md
@@ -82,7 +82,7 @@ This document maps all available skills to a content production pipeline. All sk
 ### Landing Page
 
 ```
-1. /product-marketing-context hyperspell
+1. /company-context hyperspell https://hyperspell.com
 2. /copywriting hyperspell
 3. /copy-editing hyperspell/articles/{slug}-draft.md
 4. /framer hyperspell/articles/{slug}-final.md  (optional)
@@ -91,7 +91,7 @@ This document maps all available skills to a content production pipeline. All sk
 ### SEO Content at Scale
 
 ```
-1. /product-marketing-context hyperspell
+1. /company-context hyperspell https://hyperspell.com
 2. /seo-audit hyperspell
 3. /programmatic-seo hyperspell
 4. /contentwriting hyperspell/Briefing - 1.md
@@ -119,7 +119,7 @@ Slug is derived from the article's H1: lowercase, special chars removed, spaces 
 
 ```
 {customer}/
-├── product-marketing-context-{domain}.md
+├── company-context-{domain}.md
 ├── Briefing - 1.md  (manually placed)
 ├── Briefing - 2.md
 └── articles/
@@ -147,7 +147,7 @@ Each skill has a distinct purpose:
 
 These skills work together in sequence:
 
-- **product-marketing-context** → feeds into all writing skills
+- **company-context** → feeds into all writing skills
 - **contentwriting** → then **copy-editing** → then **humanize** → then **framer**
 - **copywriting** → then **copy-editing** → then **framer**
 
@@ -159,8 +159,8 @@ Which skills reference which:
 
 | Skill | References | Referenced By |
 |-------|-----------|---------------|
-| **product-marketing-context** | — | contentwriting, copywriting, copy-editing, seo-audit, programmatic-seo, humanize |
-| **contentwriting** | copy-editing, copywriting, product-marketing-context, seo-audit, programmatic-seo | copywriting, copy-editing, seo-audit, programmatic-seo |
+| **company-context** | — | contentwriting, copywriting, copy-editing, seo-audit, programmatic-seo, humanize |
+| **contentwriting** | copy-editing, copywriting, company-context, seo-audit, programmatic-seo | copywriting, copy-editing, seo-audit, programmatic-seo |
 | **copywriting** | copy-editing, humanize, contentwriting | contentwriting, copy-editing |
 | **copy-editing** | copywriting, contentwriting, humanize | contentwriting, copywriting, seo-audit, programmatic-seo |
 | **humanize** | contentwriting, copywriting, copy-editing | copywriting, copy-editing |
@@ -192,12 +192,12 @@ Based on the pipeline, these skills could be added later:
 All skills that need brand/voice context check for:
 
 ```
-{customer-folder}/product-marketing-context-{domain}.md
+{customer-folder}/company-context-{domain}.md
 ```
 
-Example: `hyperspell/product-marketing-context-hyperspell.md`
+Example: `hyperspell/company-context-hyperspell.md`
 
-This file should be created once per client project using the `product-marketing-context` skill. The domain/brand name is included in the filename, and the file lives inside the customer folder — not at root.
+This file should be created once per client project using the `company-context` skill. The domain/brand name is included in the filename, and the file lives inside the customer folder — not at root.
 
 ---
 
@@ -205,7 +205,7 @@ This file should be created once per client project using the `product-marketing
 
 ```
 .claude/skills/
-├── product-marketing-context/
+├── company-context/
 │   └── SKILL.md
 ├── seo-audit/
 │   └── SKILL.md

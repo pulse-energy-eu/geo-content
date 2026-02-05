@@ -7,10 +7,10 @@ AI-powered content production pipeline using Claude Code slash commands. Write, 
 ### 1. Setup (once per customer)
 
 ```
-/product-marketing-context acme
+/company-context acme
 ```
 
-Creates `acme/product-marketing-context-acme.md` with brand voice, personas, positioning, and customer language. Every other command reads this automatically.
+Creates `acme/company-context-acme.md` with voice, tone, terminology, and positioning from the company's website. Every other command reads this automatically.
 
 ### 2. Blog post pipeline
 
@@ -38,7 +38,7 @@ Each command tells you the next one to run.
 
 ```
 acme/
-├── product-marketing-context-acme.md
+├── company-context-acme.md
 ├── Briefing - 1.md          ← you place this here
 └── articles/
     ├── {slug}-draft.md
