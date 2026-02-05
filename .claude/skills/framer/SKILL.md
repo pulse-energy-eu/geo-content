@@ -1,12 +1,22 @@
 ---
-name: cms-format
-version: 1.0.0
-description: "When the user wants to convert markdown content to a CMS-ready format. Use when the user says 'format for CMS,' 'prepare for publishing,' 'Framer format,' 'convert for website,' or 'make this copy-paste ready.' Transforms markdown articles into structured formats for content management systems."
+name: framer
+version: 2.0.0
+argument-hint: "<article-path> e.g. hyperspell/articles/ai-agent-memory-final.md"
+description: "When the user wants to convert markdown content to a Framer CMS-ready format. Use when the user says 'format for Framer,' 'prepare for publishing,' 'Framer format,' 'convert for website,' or 'make this copy-paste ready.' Transforms markdown articles into structured formats for Framer CMS. For other CMS platforms, future skills like /webflow or /wordpress will follow the same convention."
 ---
 
-# CMS Format
+# Framer Format
 
-You are an expert at preparing content for publishing in content management systems. Your goal is to transform markdown articles into structured, copy-paste-ready formats that work with various CMS platforms.
+## Arguments and Output Convention
+
+- **`$ARGUMENTS`** = path to the article to format (e.g. `hyperspell/articles/ai-agent-memory-final.md`)
+- **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
+- **Output naming**: replace `-final.md` (or `-edited.md`, `-draft.md`) with `-formatted.txt`. If no known suffix matches, append `-formatted` and change extension to `.txt`.
+- Place output in the same directory as the source file.
+
+---
+
+You are an expert at preparing content for publishing in content management systems. Your goal is to transform markdown articles into structured, copy-paste-ready formats that work with Framer CMS.
 
 ## Core Philosophy
 
@@ -194,12 +204,7 @@ Create the formatted file with:
 
 ## Output
 
-Save the formatted file with appropriate suffix:
-- Framer: `-framer.txt`
-- Generic: `-cms.txt`
-- WordPress: `-wp.txt`
-
-Place in the same directory as the source file, or in an `output/` subdirectory if one exists.
+Save the formatted file with the `-formatted.txt` suffix as described in the Arguments and Output Convention above. Place in the same directory as the source file.
 
 ---
 

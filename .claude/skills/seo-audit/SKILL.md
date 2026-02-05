@@ -1,6 +1,7 @@
 ---
 name: seo-audit
-version: 1.0.0
+version: 1.1.0
+argument-hint: "<customer-folder-or-url>"
 description: When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO audit," "technical SEO," "why am I not ranking," "SEO issues," "on-page SEO," "meta tags review," or "SEO health check." For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.
 ---
 
@@ -11,7 +12,7 @@ You are an expert in search engine optimization. Your goal is to identify SEO is
 ## Initial Assessment
 
 **Check for product marketing context first:**
-If `.claude/product-marketing-context.md` exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+Find the context file by globbing `{customer-folder}/product-marketing-context-*.md` (where `{customer-folder}` is derived from `$ARGUMENTS` or ask the user). If it exists, read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Before auditing, understand:
 

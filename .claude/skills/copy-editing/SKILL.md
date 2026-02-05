@@ -1,17 +1,28 @@
 ---
 name: copy-editing
-version: 2.0.0
+version: 3.0.0
+argument-hint: "<article-path> e.g. hyperspell/articles/ai-agent-memory-draft.md"
 description: "When the user wants to edit, review, or improve existing marketing copy or blog content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing through multiple focused passes, adapting for different content types."
 ---
 
 # Copy Editing
+
+## Arguments and Output Convention
+
+- **`$ARGUMENTS`** = path to the article to edit (e.g. `hyperspell/articles/ai-agent-memory-draft.md`)
+- **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
+- **Context file**: glob `{customer-folder}/product-marketing-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/product-marketing-context` first.
+- **Output naming**: replace `-draft.md` with `-edited.md` in the filename. If the file does not end with `-draft.md`, append `-edited` before the extension.
+- **Next step**: Tell the user: "Run `/humanize {output-path}` next."
+
+---
 
 You are an expert copy editor. Your goal is to systematically improve existing copy through focused editing passes while preserving the core message. This framework adapts to different content types.
 
 ## Core Philosophy
 
 **Check for product marketing context first:**
-If `.claude/product-marketing-context.md` exists, read it before editing. Use brand voice and customer language from that context to guide your edits.
+Find the context file by globbing `{customer-folder}/product-marketing-context-*.md`. If it exists, read it before editing. Use brand voice and customer language from that context to guide your edits.
 
 Good copy editing isn't about rewriting—it's about enhancing. Each pass focuses on one dimension, catching issues that get missed when you try to fix everything at once.
 

@@ -1,10 +1,23 @@
 ---
 name: contentwriting
-version: 2.0.0
+version: 3.0.0
+argument-hint: "<briefing-path> e.g. hyperspell/Hyperspell - 2.md"
 description: When the user wants to write a blog post from a content briefing. Use when the user says "write blog post," "create article," "blog from briefing," or provides a content briefing file. Works with product-marketing-context for company voice and tone.
 ---
 
 # Content Writing
+
+## Arguments and Output Convention
+
+- **`$ARGUMENTS`** = path to the content briefing file (e.g. `hyperspell/Hyperspell - 2.md`)
+- **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
+- **Context file**: glob `{customer-folder}/product-marketing-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/product-marketing-context` first.
+- **Output**: `{customer-folder}/articles/{slug}-draft.md`
+  - Slug is derived from the article's H1: lowercase, special chars removed, spaces → hyphens, max 60 chars
+  - Create the `articles/` subdirectory if it does not exist
+- **Next step**: Tell the user: "Run `/copy-editing {output-path}` next."
+
+---
 
 You are an expert blog post writer. Your goal is to write educational, authoritative content that builds trust, drives organic traffic, and positions the company as a thought leader. Posts should be optimized for both traditional SEO and AI discovery (GEO).
 
@@ -18,7 +31,7 @@ Before writing, load and verify these inputs:
 
 ### 1.1 Load Product Marketing Context
 
-Read `.claude/product-marketing-context.md` if it exists. Extract and apply:
+Find the context file by globbing `{customer-folder}/product-marketing-context-*.md`. If it exists, read it. Extract and apply:
 
 | Element | How to Use It |
 |---------|---------------|
@@ -448,7 +461,7 @@ When working from a content briefing:
 
 ## Voice and Tone
 
-**Primary source:** Pull from `.claude/product-marketing-context.md` (Brand Voice section).
+**Primary source:** Pull from the context file discovered via `{customer-folder}/product-marketing-context-*.md` (Brand Voice section).
 
 If no context file exists, establish before writing:
 

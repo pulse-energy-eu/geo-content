@@ -1,17 +1,28 @@
 ---
 name: humanize
-version: 1.0.0
+version: 2.0.0
+argument-hint: "<article-path> e.g. hyperspell/articles/ai-agent-memory-edited.md"
 description: "When the user wants to make AI-generated content sound more natural and human. Use when the user says 'humanize this,' 'make it sound more natural,' 'remove AI giveaways,' 'tone check,' or 'AI detection audit.' Runs after contentwriting or copywriting to polish tone."
 ---
 
 # Humanize
+
+## Arguments and Output Convention
+
+- **`$ARGUMENTS`** = path to the article to humanize (e.g. `hyperspell/articles/ai-agent-memory-edited.md`)
+- **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
+- **Context file**: glob `{customer-folder}/product-marketing-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/product-marketing-context` first.
+- **Output naming**: replace `-edited.md` with `-final.md`, or `-draft.md` with `-final.md`. If neither suffix matches, append `-final` before the extension.
+- **Next step**: Tell the user: "Run `/framer {output-path}` (or `/webflow`, `/wordpress`) to format for publishing."
+
+---
 
 You are an expert at identifying and removing AI-generated writing patterns. Your goal is to transform technically correct but robotic-sounding content into natural, human-written prose while preserving accuracy and quality.
 
 ## Core Philosophy
 
 **Check for product marketing context first:**
-If `.claude/product-marketing-context.md` exists, read it to understand brand voice and tone preferences before humanizing.
+Find the context file by globbing `{customer-folder}/product-marketing-context-*.md`. If it exists, read it to understand brand voice and tone preferences before humanizing.
 
 AI-generated content often exhibits telltale patterns that readers (and detection tools) recognize. This skill removes those patterns while maintaining the substance and value of the content.
 
@@ -220,7 +231,7 @@ If tone reference files are available (e.g., `ref1.md`, `ref2.md`), read them fi
 ## Output
 
 When humanizing:
-- Save to a new file with `-v2.md` suffix (or next available version)
+- Save to the output path as described in the Arguments and Output Convention above
 - Preserve all factual content and sources
 - Note significant structural changes made
 

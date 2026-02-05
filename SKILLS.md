@@ -1,6 +1,6 @@
 # Skills Overview
 
-This document maps all available skills to a content production pipeline.
+This document maps all available skills to a content production pipeline. All skills live in `.claude/skills/` and are invoked as slash commands (e.g. `/contentwriting`, `/copy-editing`).
 
 ## Pipeline Sequence
 
@@ -44,7 +44,7 @@ This document maps all available skills to a content production pipeline.
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │  PHASE 4: PUBLISH                                                           │
 │  ┌──────────────────────────┐                                               │
-│  │ cms-format               │ → Convert to Framer/WordPress/CMS format      │
+│  │ framer                   │ → Convert to Framer CMS format                │
 │  └──────────────────────────┘                                               │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -62,8 +62,72 @@ This document maps all available skills to a content production pipeline.
 | **programmatic-seo** | 2. Write | Template-based pages at scale (locations, comparisons, integrations) | "programmatic SEO", "template pages", "pages at scale", "[X] vs [Y] pages" |
 | **copy-editing** | 3. Refine | 7-sweep systematic editing (clarity, voice, proof, specificity, emotion, risk) | "edit this copy", "review my copy", "proofread", "polish this" |
 | **humanize** | 3. Refine | Remove AI giveaways, add natural tone, personality, opinions | "humanize this", "make it natural", "remove AI giveaways", "tone check" |
-| **cms-format** | 4. Publish | Convert markdown to CMS-ready format (Framer, WordPress, etc.) | "format for CMS", "Framer format", "prepare for publishing" |
+| **framer** | 4. Publish | Convert markdown to Framer CMS-ready format | "format for Framer", "Framer format", "prepare for publishing" |
 | **find-skills** | Utility | Discover and install new skills from skills.sh ecosystem | "find a skill", "how do I do X", "is there a skill for" |
+
+---
+
+## Typical Workflows
+
+### Blog Post from Briefing
+
+```
+1. /product-marketing-context hyperspell
+2. /contentwriting hyperspell/Hyperspell - 2.md
+3. /copy-editing hyperspell/articles/{slug}-draft.md
+4. /humanize hyperspell/articles/{slug}-edited.md
+5. /framer hyperspell/articles/{slug}-final.md
+```
+
+### Landing Page
+
+```
+1. /product-marketing-context hyperspell
+2. /copywriting hyperspell
+3. /copy-editing hyperspell/articles/{slug}-draft.md
+4. /framer hyperspell/articles/{slug}-final.md  (optional)
+```
+
+### SEO Content at Scale
+
+```
+1. /product-marketing-context hyperspell
+2. /seo-audit hyperspell
+3. /programmatic-seo hyperspell
+4. /contentwriting hyperspell/Briefing - 1.md
+```
+
+---
+
+## Output Naming Convention
+
+Each pipeline step produces a file with a standardized suffix:
+
+| Pipeline Step | Suffix | Example |
+|---------------|--------|---------|
+| Content briefing | (none, user-provided) | `hyperspell/Hyperspell - 2.md` |
+| contentwriting | `-draft.md` | `hyperspell/articles/what-is-ai-agent-memory-draft.md` |
+| copy-editing | `-edited.md` | `hyperspell/articles/what-is-ai-agent-memory-edited.md` |
+| humanize | `-final.md` | `hyperspell/articles/what-is-ai-agent-memory-final.md` |
+| framer | `-formatted.txt` | `hyperspell/articles/what-is-ai-agent-memory-formatted.txt` |
+
+Slug is derived from the article's H1: lowercase, special chars removed, spaces → hyphens, max 60 chars.
+
+---
+
+## Customer Folder Structure
+
+```
+{customer}/
+├── product-marketing-context-{domain}.md
+├── Briefing - 1.md  (manually placed)
+├── Briefing - 2.md
+└── articles/
+    ├── {slug}-draft.md
+    ├── {slug}-edited.md
+    ├── {slug}-final.md
+    └── {slug}-formatted.txt
+```
 
 ---
 
@@ -84,39 +148,8 @@ Each skill has a distinct purpose:
 These skills work together in sequence:
 
 - **product-marketing-context** → feeds into all writing skills
-- **contentwriting** → then **humanize** → then **cms-format**
-- **copywriting** → then **copy-editing** → then **cms-format**
-
----
-
-## Typical Workflows
-
-### Blog Post from Briefing
-
-```
-1. /product-marketing-context  (once per client)
-2. /contentwriting             (briefing → article v1)
-3. /humanize                   (article v1 → v2)
-4. /cms-format                 (v2 → framer.txt)
-```
-
-### Landing Page
-
-```
-1. /product-marketing-context  (once per client)
-2. /copywriting                (create page copy)
-3. /copy-editing               (7-sweep polish)
-4. /cms-format                 (optional)
-```
-
-### SEO Content at Scale
-
-```
-1. /product-marketing-context  (once per client)
-2. /seo-audit                  (baseline assessment)
-3. /programmatic-seo           (template strategy)
-4. /contentwriting             (individual pages)
-```
+- **contentwriting** → then **copy-editing** → then **humanize** → then **framer**
+- **copywriting** → then **copy-editing** → then **framer**
 
 ---
 
@@ -133,7 +166,7 @@ Which skills reference which:
 | **humanize** | contentwriting, copywriting, copy-editing | copywriting, copy-editing |
 | **seo-audit** | programmatic-seo, contentwriting, copy-editing | contentwriting |
 | **programmatic-seo** | seo-audit, contentwriting, copy-editing | seo-audit |
-| **cms-format** | contentwriting, humanize, copy-editing | — |
+| **framer** | contentwriting, humanize, copy-editing | — |
 | **find-skills** | — | — |
 
 ---
@@ -149,6 +182,8 @@ Based on the pipeline, these skills could be added later:
 | **internal-linking** | Add internal links across articles | Manual |
 | **schema-markup** | Add structured data to pages | Manual |
 | **email-sequence** | Email copy (nurture, launch, etc.) | Manual |
+| **webflow** | Convert markdown to Webflow CMS format | Use framer as template |
+| **wordpress** | Convert markdown to WordPress format | Use framer as template |
 
 ---
 
@@ -157,17 +192,19 @@ Based on the pipeline, these skills could be added later:
 All skills that need brand/voice context check for:
 
 ```
-.claude/product-marketing-context.md
+{customer-folder}/product-marketing-context-{domain}.md
 ```
 
-This file should be created once per client project using the `product-marketing-context` skill.
+Example: `hyperspell/product-marketing-context-hyperspell.md`
+
+This file should be created once per client project using the `product-marketing-context` skill. The domain/brand name is included in the filename, and the file lives inside the customer folder — not at root.
 
 ---
 
 ## Directory Structure
 
 ```
-skills/
+.claude/skills/
 ├── product-marketing-context/
 │   └── SKILL.md
 ├── seo-audit/
@@ -186,7 +223,7 @@ skills/
 │   └── references/
 ├── humanize/
 │   └── SKILL.md
-├── cms-format/
+├── framer/
 │   └── SKILL.md
 └── find-skills/
     └── SKILL.md
