@@ -1,0 +1,111 @@
+<!-- JSON-LD Structured Data for: How to Build Persistent Memory for Your AI Agent -->
+<!-- Paste into CMS <head> or Custom Code section -->
+<!-- Blog base URL assumed as https://hyperspell.com/blog — verify and update if different -->
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Build Persistent Memory for Your AI Agent",
+  "description": "Step-by-step guide to building persistent memory for AI agents: storage strategies, ingestion pipelines, retrieval patterns, and the build vs. buy decision.",
+  "url": "https://hyperspell.com/blog/how-to-build-persistent-memory-for-your-ai-agent",
+  "datePublished": "2026-02-05",
+  "dateModified": "2026-02-05",
+  "author": {
+    "@type": "Person",
+    "name": "Manu Ebert"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hyperspell",
+    "url": "https://hyperspell.com"
+  },
+  "keywords": "AI agent memory, persistent memory, agent memory architecture, memory layer, context engineering, build AI agent memory",
+  "wordCount": 2355,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://hyperspell.com/blog/how-to-build-persistent-memory-for-your-ai-agent"
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does it cost to build AI agent memory from scratch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A production-quality memory system typically takes 3-6 months and $50,000-$150,000 in engineering costs. Ongoing infrastructure and maintenance add $1,000-$7,500 per month. The largest cost drivers are OAuth integrations for external data sources and retrieval tuning for quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which vector database should I use for AI agent memory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with pgvector or Chroma for prototyping. For production, Pinecone, Qdrant, and Weaviate are the most established options. Pinecone offers fully managed infrastructure with minimal operational overhead. Qdrant excels at complex metadata filtering. Weaviate provides strong built-in hybrid search. Choose based on your scale, query patterns, and team preferences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a graph database for agent memory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. Vector databases handle semantic search well for most use cases. Add a graph database when your agent needs to answer relationship queries or when temporal ordering of events matters. Hybrid systems that combine vector search with knowledge graph traversal deliver the best retrieval quality for complex, multi-source agent workloads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I keep agent memories up to date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Build incremental re-indexing into your ingestion pipeline from the start. Track document versions and detect changes rather than re-indexing everything on a schedule. For data sources like email and Slack, use webhooks or polling with change detection. Include timestamps in stored memories so the retrieval engine can weight recent information higher."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hyperspell",
+  "url": "https://hyperspell.com"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://hyperspell.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://hyperspell.com/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Build Persistent Memory for Your AI Agent",
+      "item": "https://hyperspell.com/blog/how-to-build-persistent-memory-for-your-ai-agent"
+    }
+  ]
+}
+</script>
