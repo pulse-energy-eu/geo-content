@@ -1,7 +1,7 @@
 ---
 name: schema
 version: 2.0.0
-argument-hint: "<customer-folder> [sample-article-path] e.g. hyperspell hyperspell/articles/what-is-ai-agent-memory-final.md"
+argument-hint: "<customer-folder> [sample-article-path] e.g. hyperspell hyperspell/output/what-is-ai-agent-memory-final.md"
 description: "When the user wants to generate Next.js JSON-LD integration files for a customer. Use when the user says 'schema setup,' 'generate schema templates,' 'Next.js structured data,' 'JSON-LD setup,' or 'schema.' Reads company-context and a sample article to produce page-level and layout-level TypeScript templates for the customer's Next.js project. One-time per customer, not per article."
 ---
 
@@ -11,7 +11,7 @@ description: "When the user wants to generate Next.js JSON-LD integration files 
 
 - **`$ARGUMENTS`** = `<customer-folder> [sample-article-path]`
   - `<customer-folder>` — required (e.g. `hyperspell`)
-  - `[sample-article-path]` — optional. A `-final.md` to validate frontmatter shape. If not provided, glob `{customer-folder}/articles/*-final.md` and use the first match.
+  - `[sample-article-path]` — optional. A `-final.md` to validate frontmatter shape. If not provided, glob `{customer-folder}/output/*-final.md` and use the first match.
 - **Context file**: glob `{customer-folder}/company-context-*.md` — required. Read Section 1 (company name, URL) and Section 8 (blog base URL, default author, logo URL, social profiles). If not found, tell the user to run `/company-context` first.
 - **Output**: Two files in the customer root folder:
   - `{customer-folder}/page-schema.tsx` — per-page schema builder (BlogPosting + FAQPage + BreadcrumbList)

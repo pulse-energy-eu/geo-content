@@ -1,7 +1,7 @@
 ---
 name: copy-editing
 version: 3.0.0
-argument-hint: "<article-path> e.g. hyperspell/articles/ai-agent-memory-draft.md"
+argument-hint: "<article-path> e.g. hyperspell/output/ai-agent-memory-draft.md"
 description: "When the user wants to edit, review, or improve existing marketing copy or blog content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing through multiple focused passes, adapting for different content types."
 ---
 
@@ -9,7 +9,7 @@ description: "When the user wants to edit, review, or improve existing marketing
 
 ## Arguments and Output Convention
 
-- **`$ARGUMENTS`** = path to the article to edit (e.g. `hyperspell/articles/ai-agent-memory-draft.md`)
+- **`$ARGUMENTS`** = path to the article to edit (e.g. `hyperspell/output/ai-agent-memory-draft.md`)
 - **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
 - **Context file**: glob `{customer-folder}/company-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/company-context` first.
 - **Output naming**: replace `-draft.md` with `-edited.md` in the filename. If the file does not end with `-draft.md`, append `-edited` before the extension.

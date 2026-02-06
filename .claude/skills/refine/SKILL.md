@@ -1,7 +1,7 @@
 ---
 name: refine
 version: 1.5.0
-argument-hint: "<article-path> e.g. hyperspell/articles/context-engineering-draft.md"
+argument-hint: "<article-path> e.g. hyperspell/output/context-engineering-draft.md"
 description: "When the user wants to refine a blog post draft. Use when the user says 'refine this,' 'polish this draft,' 'check for AI patterns,' 'verify sources,' or 'make this production-ready.' Runs after contentwriting to verify accuracy, check voice consistency, and remove AI generation artifacts."
 ---
 
@@ -9,7 +9,7 @@ description: "When the user wants to refine a blog post draft. Use when the user
 
 ## Arguments and Output Convention
 
-- **`$ARGUMENTS`** = path to the article to refine (e.g. `hyperspell/articles/context-engineering-draft.md`)
+- **`$ARGUMENTS`** = path to the article to refine (e.g. `hyperspell/output/context-engineering-draft.md`)
 - **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
 - **Context file**: glob `{customer-folder}/company-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/company-context` first.
 - **Output naming**: replace `-draft.md` with `-final.md` in the filename. If the file does not end with `-draft.md`, append `-final` before the extension.

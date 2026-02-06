@@ -13,10 +13,10 @@ description: When the user wants to write a blog post from a content briefing. U
 - **Word count precedence**: briefing's specified word count > CLI argument > default 2000-4000
 - **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
 - **Context file**: glob `{customer-folder}/company-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/company-context` first.
-- **Output**: `{customer-folder}/articles/{slug}-draft.md`
+- **Output**: `{customer-folder}/output/{slug}-draft.md`
   - Slug source: use the briefing's "Target slug" field if provided (strip any leading path like `/blog/`). Otherwise derive from the H1: lowercase, special chars removed, spaces → hyphens, max 60 chars.
   - The same slug must be used in the YAML frontmatter `slug` field and in the output filename.
-  - Create the `articles/` subdirectory if it does not exist
+  - Create the `output/` subdirectory if it does not exist
 - **Next step**: Tell the user: "Run `/refine {output-path}` next."
 
 ---

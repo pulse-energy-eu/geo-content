@@ -14,10 +14,10 @@ AI-powered content production pipeline using Claude Code slash commands. Write, 
 ### Per article
 
 ```
-/contentwriting acme/Briefing - 1.md      → acme/articles/{slug}-draft.md
-/refine acme/articles/{slug}-draft.md     → acme/articles/{slug}-final.md
-/image-pexels acme/articles/{slug}-final.md  → downloads hero image
-/framer acme/articles/{slug}-final.md     → acme/articles/{slug}-framer.md
+/contentwriting acme/Briefing - 1.md      → acme/output/{slug}-draft.md
+/refine acme/output/{slug}-draft.md     → acme/output/{slug}-final.md
+/image-pexels acme/output/{slug}-final.md  → downloads hero image
+/framer acme/output/{slug}-final.md     → acme/output/{slug}-framer.md
 ```
 
 ## Commands
@@ -33,10 +33,10 @@ AI-powered content production pipeline using Claude Code slash commands. Write, 
 
 | Command | What it does | Input | Output |
 |---------|-------------|-------|--------|
-| `/contentwriting` | Writes a full blog post from a content briefing, with SEO/GEO optimization and complete YAML frontmatter (including `wordCount` + `faqs`). | Briefing `.md` file | `{customer}/articles/{slug}-draft.md` |
-| `/refine` | Verifies accuracy, checks voice consistency, removes AI generation artifacts, and validates frontmatter completeness. | `-draft.md` | `{customer}/articles/{slug}-final.md` |
+| `/contentwriting` | Writes a full blog post from a content briefing, with SEO/GEO optimization and complete YAML frontmatter (including `wordCount` + `faqs`). | Briefing `.md` file | `{customer}/output/{slug}-draft.md` |
+| `/refine` | Verifies accuracy, checks voice consistency, removes AI generation artifacts, and validates frontmatter completeness. | `-draft.md` | `{customer}/output/{slug}-final.md` |
 | `/image-pexels` | Finds and downloads a royalty-free hero image from Pexels matching the article topic. | `-final.md` | Downloaded image file |
-| `/framer` | Converts a finished article to Framer CMS-ready format. | `-final.md` | `{customer}/articles/{slug}-framer.md` |
+| `/framer` | Converts a finished article to Framer CMS-ready format. | `-final.md` | `{customer}/output/{slug}-framer.md` |
 
 ### Other commands
 
@@ -56,7 +56,7 @@ acme/
 ├── page-schema.tsx               ← one-time Next.js JSON-LD (per-page)
 ├── layout-schema.tsx             ← one-time Next.js JSON-LD (global)
 ├── Briefing - 1.md               ← you place this here
-└── articles/
+└── output/
     ├── {slug}-draft.md
     └── {slug}-final.md
 ```
