@@ -537,7 +537,7 @@ When working from a content briefing:
 
 ### Blog Post Markdown
 
-All metadata is stored as YAML frontmatter at the top of the file. This is machine-readable, supported by every static site generator and CMS, and consumed by downstream skills (`/refine`, `/publish`, `/framer`).
+All metadata is stored as YAML frontmatter at the top of the file. This is machine-readable, supported by every static site generator and CMS, and consumed by downstream skills (`/refine`, `/schema`, `/framer`).
 
 Populate the frontmatter from the content briefing. Use the briefing's exact values for keyword, slug, and intent fields rather than inventing new ones.
 
@@ -632,7 +632,7 @@ Do **not** add any meta content, publication notes, or changelog after the Sourc
 ## Related Skills
 
 - **refine**: For polishing the draft after writing
-- **publish**: For generating JSON-LD structured data from a refined article
+- **schema**: For generating JSON-LD structured data from a refined article
 - **copy-editing**: For marketing copy and landing page editing
 - **copywriting**: For landing page and marketing page copy
 - **company-context**: For establishing brand voice and context

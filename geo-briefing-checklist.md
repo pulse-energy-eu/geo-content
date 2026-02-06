@@ -9,7 +9,7 @@ These fields populate the YAML frontmatter in the article draft. Include them in
 | Field | Required | Purpose | Example |
 |-------|----------|---------|---------|
 | **H1** | yes | Article title and `title` in YAML | "How to Evaluate Private Equity: A Complete Guide..." |
-| **Target slug** | yes | URL path, used in YAML `slug` and by `/publish` for schema URLs | `/blog/evaluate-private-equity-guide` |
+| **Target slug** | yes | URL path, used in YAML `slug` and by `/schema` for schema URLs | `/blog/evaluate-private-equity-guide` |
 | **Primary keyword** | yes | YAML `seo.primaryKeyword`, drives H1/H2 placement | `evaluate private equity` |
 | **Secondary keywords** | yes | YAML `seo.secondaryKeywords`, woven into body | `private equity performance metrics, IRR MOIC DPI` |
 | **Search intent** | yes | YAML `seo.searchIntent`, shapes article structure and CTAs | `informational`, `commercial`, `comparison` |

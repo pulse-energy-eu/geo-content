@@ -13,7 +13,7 @@ description: "When the user wants to refine a blog post draft. Use when the user
 - **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
 - **Context file**: glob `{customer-folder}/company-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/company-context` first.
 - **Output naming**: replace `-draft.md` with `-final.md` in the filename. If the file does not end with `-draft.md`, append `-final` before the extension.
-- **Next step**: Tell the user: "Run `/publish {output-path}` to generate structured data, then `/framer {output-path}` (or `/webflow`, `/wordpress`) to format for publishing."
+- **Next step**: Tell the user: "Run `/schema {output-path}` to generate structured data, then `/framer {output-path}` (or `/webflow`, `/wordpress`) to format for publishing."
 
 ---
 
@@ -251,5 +251,5 @@ Save the refined article to the output path described in Arguments and Output Co
 - **contentwriting**: Write blog posts (use refine after)
 - **copy-editing**: For marketing copy and landing page editing (full seven sweeps)
 - **company-context**: For establishing brand voice and context (read by this skill automatically)
-- **publish**: For generating JSON-LD structured data from the refined article
+- **schema**: For generating JSON-LD structured data from the refined article
 - **framer**: For formatting the refined article for Framer CMS publishing
