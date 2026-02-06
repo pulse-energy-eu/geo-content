@@ -40,7 +40,7 @@ The field matured in stages. Prompt engineering dominated 2022-2023, when the pr
 
 ## What Are the Four Layers of Agent Context?
 
-The Four Layers of Agent Context is a framework for understanding the types of information an agent needs. Most agent builders address only the first two layers, which is why most agents feel generic.
+The Four Layers of Agent Context is a framework for understanding the types of information an agent needs, and why most agents only address half of them.
 
 ### Layer 1: Instruction Context
 
@@ -69,7 +69,7 @@ The key insight: Layers 1 and 2 make an agent functional. Layers 3 and 4 make it
 
 ## Why Doesn't a Larger Context Window Solve This?
 
-A larger context window is a bigger container, not a smarter selection process. Having capacity for 1 million tokens does not solve the problem of choosing which tokens matter.
+A larger context window is a bigger container, not a smarter selection process; room for a million tokens does not mean knowing which tokens matter.
 
 Three practical problems persist regardless of window size.
 
@@ -83,11 +83,11 @@ We think of context engineering as the selection layer: the system that determin
 
 ## How Do You Build a Context Engineering Stack?
 
-A production context engineering stack has five components. Each addresses a specific gap between raw data and useful agent context.
+A production context engineering stack has five components, each bridging a specific gap between raw workspace data and useful agent context.
 
 **Data ingestion.** Connect to the user's actual workspace: email, Slack, Google Docs, CRM, calendar, project management tools. This is the foundation, and it is also where most teams lose months to OAuth flows, API pagination, and data normalization. As one Hyperspell customer put it: "We were spending all our time on OAuth instead of building our product." Hyperspell's approach handles this with [40+ pre-built integrations](https://hyperspell.com) and managed OAuth, so teams ship in days rather than months.
 
-**Indexing and retrieval.** Once data is connected, it needs to be searchable. Semantic search handles meaning-based queries. Keyword search handles exact matches. Knowledge graphs capture relationships between entities. Production systems need all three working together, which is the approach we take at Hyperspell with [indexed and live search modes](https://docs.hyperspell.com/core/concepts).
+**Indexing and retrieval.** Once data is connected, it needs to be searchable. Semantic search handles meaning-based queries. Keyword search handles exact matches. Knowledge graphs capture relationships between entities. The strongest systems combine all three, which is the approach we use at Hyperspell with [indexed and live search modes](https://docs.hyperspell.com/core/concepts).
 
 **Memory management.** Not everything should be remembered forever. A context engineering stack needs policies for what to retain, what to update, what to forget, and how to handle conflicting information. This is where RAG-only approaches break down: they retrieve documents but have no concept of memory lifecycle.
 
@@ -97,7 +97,7 @@ A production context engineering stack has five components. Each addresses a spe
 
 ## What Does Context Engineering Look Like in Practice?
 
-The difference between an agent with and without proper context engineering is measurable. We see this across every customer deployment. Three examples.
+The difference between an agent with and without proper context engineering is measurable in response time, accuracy, and user satisfaction. We see this across every deployment. Three examples.
 
 ### Customer Support Agent
 
@@ -113,9 +113,7 @@ With temporal context, the picture changes. The agent knows the last call was tw
 
 ### Code Assistant
 
-A developer asks "Why is the auth flow failing?" Without project history, the agent suggests generic debugging steps for authentication, none of which apply to this codebase. The developer wastes 20 minutes before realizing the suggestions are irrelevant.
-
-With project history loaded as context, the agent knows the team migrated from JWT to session-based auth last sprint, that three PRs related to the auth flow merged this week, and that a similar bug was fixed in the payments service last month. It points to the specific migration change that likely introduced the regression.
+A developer asks "Why is the auth flow failing?" Most agents suggest generic debugging steps for authentication, none of which apply to this codebase. The developer wastes 20 minutes before realizing the suggestions are irrelevant. But an agent with project history knows the team migrated from JWT to session-based auth last sprint, that three PRs related to the auth flow merged this week, and that a similar bug was fixed in the payments service last month. It points to the specific migration change that likely introduced the regression.
 
 In each case, the model's reasoning ability is identical. The context is the variable.
 

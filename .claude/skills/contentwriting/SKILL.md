@@ -1,6 +1,6 @@
 ---
 name: contentwriting
-version: 3.6.0
+version: 3.7.0
 argument-hint: "<briefing-path> [word-count] e.g. hyperspell/Hyperspell - 2.md 3000"
 description: When the user wants to write a blog post from a content briefing. Use when the user says "write blog post," "create article," "blog from briefing," or provides a content briefing file. Works with company-context for company voice and tone.
 ---
@@ -14,7 +14,8 @@ description: When the user wants to write a blog post from a content briefing. U
 - **Customer folder**: first path segment of `$ARGUMENTS` (e.g. `hyperspell`)
 - **Context file**: glob `{customer-folder}/company-context-*.md` — read and apply brand voice, customer language, etc. If not found, warn the user and suggest running `/company-context` first.
 - **Output**: `{customer-folder}/articles/{slug}-draft.md`
-  - Slug is derived from the article's H1: lowercase, special chars removed, spaces → hyphens, max 60 chars
+  - Slug source: use the briefing's "Target slug" field if provided (strip any leading path like `/blog/`). Otherwise derive from the H1: lowercase, special chars removed, spaces → hyphens, max 60 chars.
+  - The same slug must be used in the YAML frontmatter `slug` field and in the output filename.
   - Create the `articles/` subdirectory if it does not exist
 - **Next step**: Tell the user: "Run `/refine {output-path}` next."
 
