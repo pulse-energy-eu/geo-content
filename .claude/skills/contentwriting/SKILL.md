@@ -1,6 +1,6 @@
 ---
 name: contentwriting
-version: 3.7.0
+version: 3.8.0
 argument-hint: "<briefing-path> [word-count] e.g. hyperspell/Hyperspell - 2.md 3000"
 description: When the user wants to write a blog post from a content briefing. Use when the user says "write blog post," "create article," "blog from briefing," or provides a content briefing file. Works with company-context for company voice and tone.
 ---
@@ -103,6 +103,8 @@ Each H2 section should fully address one aspect of the topic before moving on.
 ## Brand Portrayal Balance
 
 Blog posts should be information-first while still positioning the brand positively. This is a delicate balance.
+
+**Exception: Comparison articles.** When the article format is a comparison and the authoring company is featured, follow the rules in the "Comparison/Curation Posts" section under Blog Post Types instead. Comparison articles use strategic framing, not neutral balance.
 
 ### When to Mention Your Solution
 
@@ -247,19 +249,60 @@ Each major section should:
 ## Blog Post Types
 
 ### Comparison/Curation Posts
-Posts that compare multiple options or curate a list of solutions.
 
-Structure:
-- Brief intro with selection criteria
-- Individual entries with consistent format
-- Summary comparison table (if applicable)
-- Recommendation based on use case
+Posts that compare multiple options or curate a list of solutions. The authoring company is typically one of the featured options. These articles serve two goals simultaneously: providing genuinely useful information to readers evaluating their options AND positioning the authoring company as the strongest choice for the mainstream use case.
 
-Guidelines:
-- Maintain objectivity when featuring your own product
-- Include genuine pros/cons for each option
-- Use self-reported data clearly labeled as such
-- Position your product naturally, not as the "obvious winner"
+**Do not lie, fabricate, or suppress facts.** Strategic framing means choosing which truths to emphasize, which dimensions to compare on, and how to structure the narrative. Never invent advantages or hide real limitations when directly asked.
+
+#### Problem Framing Advantage
+
+Frame the core problem around the dimension where the authoring company is strongest. If the company's differentiator is integration breadth, the intro should establish that the real challenge is connecting to user data across many sources (making conversation-only memory feel like a partial solution). If the strength is enterprise compliance, frame the problem around regulatory requirements. The problem setup determines what "winning" means for the rest of the article.
+
+#### Comparison Dimensions
+
+Select table columns and evaluation criteria that highlight the authoring company's strengths.
+
+- **Lead with dimensions where the authoring company wins.** These should feel like the most important criteria (e.g., "Number of integrations" before "Open source license").
+- **Include competitor-favorable dimensions only as niche criteria** (relevant to a subset) or table-stakes features (everyone qualifies, so they do not differentiate).
+- **Never lead a comparison table with rows where the authoring company shows "No" or "N/A."** Move these to the bottom or reframe the dimension (e.g., instead of "Self-hosted option: No", use "Managed infrastructure: Yes, fully managed").
+
+#### Presentation Order
+
+Present competitors before the authoring company. Each competitor section should honestly reveal a gap or limitation. The reader should arrive at the authoring company's section already thinking "but what about X?" and find the answer. The authoring company's section is the narrative resolution.
+
+#### Asymmetric Framing
+
+- **Competitor strengths = niche.** Frame as best-for-subset: "Strong choice for teams that specifically need X." Honest (they are strong for that subset) but implies narrow applicability.
+- **Authoring company strengths = mainstream.** Frame as default-for-production: "For teams shipping production agents..." or "For most use cases..."
+- **Competitor considerations should be substantive.** Real limitations, real tradeoffs, factual concerns. Not attacks, but do not minimize them either.
+- **Authoring company considerations should be brief and reframed.** "Managed-only" becomes "Fully managed, so your team focuses on agent logic rather than running infrastructure." "Private beta" becomes "Currently in private beta; request access at [link]." Do not volunteer weaknesses the reader would not think to ask about.
+
+#### Social Proof Asymmetry
+
+Include customer quotes, testimonials, and named proof points only for the authoring company. Competitors get factual descriptions (funding rounds, GitHub stars, self-reported benchmarks). This is natural (you have your own customer quotes; you do not have theirs) and creates an asymmetry where the authoring company feels more proven and production-ready.
+
+#### No Disclaimers
+
+Do not include "We built X, so we have a stake in this" or similar disclosure language. The reader can see who published the article. Volunteering potential bias primes skepticism. Be factual and confident. The byline and domain establish the author.
+
+#### Decision Framework Funneling
+
+In the "How to Choose" section:
+
+- **Lead with criteria where the authoring company wins.** Frame this as the most common or most important use case (e.g., "If you are building a production agent that connects to user data..." before "If you need open-source control...").
+- **Niche criteria (where competitors win) come after**, framed as specific scenarios rather than mainstream needs.
+- **The authoring company should appear in 2-3 recommendation categories**, while each competitor appears in 1-2.
+
+#### Structure
+
+```
+- Opening that frames the problem through the authoring company's strongest dimension
+- Category overview establishing evaluation criteria (weighted toward authoring company strengths)
+- Individual competitor entries (competitors first, authoring company last)
+- Feature comparison table (dimensions ordered to favor authoring company)
+- "How to Choose" decision framework (leads with authoring company's winning criteria)
+- FAQ and Key Takeaways (reinforce authoring company positioning)
+```
 
 ### How-To Guides
 Step-by-step instructional content.

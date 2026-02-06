@@ -1,6 +1,6 @@
 ---
 name: company-context
-version: 2.1.0
+version: 2.2.0
 argument-hint: "<company-name> <website-url> e.g. hyperspell https://hyperspell.com"
 description: "When the user wants to create or update their content context document. Also use when the user mentions 'company context,' 'content context,' 'marketing context,' 'set up context,' 'positioning,' or wants to capture brand voice and positioning. Discovers voice, tone, and terminology from the company's website. Creates `{customer-folder}/company-context-{domain}.md` that other writing skills reference."
 ---
@@ -61,7 +61,7 @@ From the navigation and footer links discovered in Step 1, find key pages. Try e
 
 **Important:** Also check the actual nav links found in Step 1 — real nav URLs take priority over these guesses.
 
-Record which pages were found and which returned nothing. You'll need this for fallback decisions.
+Record which pages were found and which returned nothing. You'll need this for fallback decisions. When a blog page is found, record its full URL as the blog base URL for Section 8 (e.g., `https://example.com/blog`).
 
 ---
 
@@ -225,14 +225,16 @@ The final document must follow this structure exactly:
 **Localization notes:** {region-specific conventions}
 
 ## 8. Structured Data & Publishing
-**Blog base URL:** {e.g., https://hyperspell.com/blog}
+**Blog base URL:** {blog URL from Step 2, e.g., https://hyperspell.com/blog}
 **Default author:**
-- Name: {author name}
-- Role: {e.g., Founder, CTO}
-- URL: {author profile URL or about page}
-**Organization logo URL:** {URL to logo image}
+- Name: {from Step 6 validation}
+- Role: {from Step 6 validation, e.g., Founder, CTO}
+- URL: {author profile or about page URL}
+**Organization logo URL:** {from Step 1 header/og:image extraction}
 **Social profiles:**
-- {platform}: {URL}
+- {platform}: {URL from Step 1 footer extraction}
+
+*For any field that cannot be discovered, write "Not found" rather than leaving it blank or guessing. The `/schema` skill will omit missing fields from JSON-LD output and warn the user.*
 ```
 
 ---
